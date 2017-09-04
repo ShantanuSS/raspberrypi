@@ -1,0 +1,24 @@
+************Perl**********
+1)I hope you ran php file on the browser,we start it from there,don't close that session
+
+2)	# clear
+3)go to config file	
+	# cd/etc/nginx/
+	# ls
+ 	#cd sites-available
+	#pico default
+4)Now scroll down and below php section add the following code
+
+location -\_plicgi5 {
+	try_files $uri =404;
+	grip off;
+	fastcgi_pass 127.0.0.1:8999;
+	fastcgi_index index.pl; 
+	fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+	include fastcgi_params;
+}
+
+Save by Ctrl+X   then Y Enter
+
+5)
+
