@@ -1,0 +1,19 @@
+********************************Setting up nginx Server*********************************
+
+1) Change to root directory by :    
+   $ sudo -i
+2) #apt-get update
+3)Now install each of the packages,
+   $apt-get install nginx php5-fpm php5-cgi php5-cli php5-common libfc-perl
+
+
+4) # clear
+5) # service nginx start		//It starts nginx
+
+6)ifconfig              		//it tells the ip address
+7)Now paste this ip address to any of computer's browser
+
+8)If everything above went well,then  it shows    Welcome to nginx!     on the browser window.
+ 
+
+
