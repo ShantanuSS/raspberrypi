@@ -20,5 +20,49 @@ location -\_plicgi5 {
 
 Save by Ctrl+X   then Y Enter
 
-5)
+5)Now we need fast cgi wrapper script for perl so type,
+	# wget http://nginxlibrary.com/downloads/perl-fcgi/fastcgi-wrapper -0/usr/bin/fastcgi-wrapper.pl
+	
+	and hit enter
+6)Now we have server scripts now to make them executable,
+	# chmod +x /usr/bin/fastcgi-wrapper.pl
+	# chmod +x /etc/init.d/perl.fcgi
+
+7)Now setup the service
+	# update-rc.d perl-fcgi defaults
+	# inserv  perl-fcgi
+8)Restart nginx ,
+	# service nginx restart
+	# /etc/init.d/perl-fcgi start
+
+9)Go back web root directory
+	#cd /usr/share/nginx/www
+	#ls
+10)Now create ab Perl cgi script called index.cgi
+	# pico index.cgi
+11)Now write script like,
+
+#!/usr/bin/perl
+
+print "Content-type:text/html\n\n";
+print <<EndofHTML ;
+<HTML><HEAD><TITLE>Perl Environment Variables</TITLE></HEAD>
+<BODY>
+<H1>Perl Environment Variables</H1>
+EndofHTML
+
+foreach $key (sort(keys %ENV)) {
+print "$key = $ENV($key)<br>\n";
+}
+
+print "</BODY></HTML>";
+
+
+Save this file(Ctrl+x)
+
+12)HTML and PHP files should have permissions of 644 nad perl scripts need to be executed with 755 permission so,
+	# chmod 755 index.cgi
+
+13)Now everything is completed ,so run the ip address on the browser by typing youripaddress/index.cgi
+
 
