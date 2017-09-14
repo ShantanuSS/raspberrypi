@@ -1,38 +1,36 @@
 ******************************************Raspberry Pi**************************************************
 
-# Minecraft
-
 1)Login in pi using login name and password(usually login:pi and password:raspberry)
 
 2)Connect your pi with monitor,mouse ,keyboard and router(via ssh it doesn't works)
 
 3)First of update all your raspberry files,by typing
 
-``` $ sudo -i                      //It will change the user to root user who can take administrative decisions ```
+   $ sudo -i                      //It will change the user to root user who can take administrative decisions 
 
-``` # whoami                        //check by this it display root ```
+   # whoami                        //check by this it display root 
 
-``` # apt-get update 		 //updates all Raspberry files ```
+   # apt-get update 		 //updates all Raspberry files 
 
-``` #exit 			 //logs you out from root user ```
+   #exit 			 //logs you out from root user 
 
 4)Now type 
 
-``` $ wget https://s3.amazonaws.com/assets.minecraft.net/pi/minecraft-pi-0.1.1.tar.gz ```
+   $ wget https://s3.amazonaws.com/assets.minecraft.net/pi/minecraft-pi-0.1.1.tar.gz 
 
 It downloads compressed tar.gz file ,now we need to uncompress it.
 
 
 5)To uncompress it
 
-``` $ tar -zxvf minecraft-pi.0.1.1.tar.gz ```
+   $ tar -zxvf minecraft-pi.0.1.1.tar.gz 
 
 6)Now go to the directory newly created
 
-```  $ cd mcpi ```
+    $ cd mcpi
 
 7)To run the game
 
-``` $ ./minecraft-pi ```
+ $ ./minecraft-pi 
 
 Enjoy the game :)
